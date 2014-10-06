@@ -1,0 +1,14 @@
+{
+  "name": "SendMail",
+  "version": "1.0.0",
+  "description": "send email for https://ap.antfact.com who is on date today.",
+  "main": "main.js",
+  "author": "lianyzhou@gmail.com",
+  "dependencies" : {
+  	"emailjs":"0.3.12",
+  	"later":"1.1.6",
+  	"amanda":"0.5.1",
+  	"q":"1.0.0",
+  	"moment":"2.5.0"
+  }
+}

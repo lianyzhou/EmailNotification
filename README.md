@@ -9,11 +9,17 @@ EmailNotification
 
 sh start.sh
 
+在windows环境下运行
+
+start.bat
+
 --------------------------------------
 
 文件结构说明：
 
 start.sh 用于在linux环境下启动服务。启动服务后，会添加一个名为ApEmailer的进程。
+
+start.bat 用于在windows环境下启动服务。启动服务后，窗口的标题会变成ApEmailer。
 
 main.js是程序的主文件，是程序的入口
 

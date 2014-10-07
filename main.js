@@ -116,7 +116,7 @@ function scheduleJob() {
 		sendMail();
 	} , cron);
 }
-
+process.title = "ApEmailer";
 validateSchema().then(function(json) {
 	parseConfig(json);
 	scheduleJob();

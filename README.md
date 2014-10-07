@@ -15,8 +15,18 @@ sh start.sh
 
 start.sh 用于在linux环境下启动服务。启动服务后，会添加一个名为ApEmailer的进程。
 
+main.js是程序的主文件，是程序的入口
+
+package.json配置了程序所以来的nodejs包
+
+password.cfg记录了发送邮件的邮箱用户名和密码
+
+schema.js是用来对config.json进行验证的文件，使用了amanda进行json校验
+
+
 config.json用于配置发送邮件。
 
+--------------------------------------
 
 "username":发邮件的用户名
 
@@ -38,11 +48,5 @@ config.json用于配置发送邮件。
 
 "dates":用来配置哪一天是谁值班
 
-main.js是程序的主文件，是程序的入口
 
-package.json配置了程序所以来的nodejs包
-
-password.cfg记录了发送邮件的邮箱用户名和密码
-
-schema.js是用来对config.json进行验证的文件，使用了amanda进行json校验
 

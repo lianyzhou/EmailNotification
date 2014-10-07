@@ -19,14 +19,23 @@ config.json用于配置发送邮件。
 
 
 "username":发邮件的用户名
+
 "password":发邮件的密码
+
 "smtp":发邮件的smtp服务地址
+
 "crontab" : 用于设置发送时间，默认为每个小时的0分
+
 "hours":数组，用于设置
+
 "port":smtp的ssl端口
+
 "emailtitle":发送邮件的标题
+
 "emailcontent":发送邮件的内容
+
 "emails":用来配置同事的名字与邮箱对应关系
+
 "dates":用来配置哪一天是谁值班
 
 main.js是程序的主文件，是程序的入口

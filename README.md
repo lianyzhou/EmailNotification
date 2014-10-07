@@ -3,9 +3,6 @@ EmailNotification
 
 邮件通知同事进行AP值班。
 
-
-文件结构说明：
-
 使用方法：
 
 在linux环境下运行

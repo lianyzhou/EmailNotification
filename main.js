@@ -75,8 +75,13 @@ function sendMail() {
 	};
 	
 	var personInfo = getPerson();
+	var justRemindRelax = false;
 	if(!personInfo) {
-		return;
+		personInfo = {
+			person : "周连毅",
+			email : "zhoulianyi@antrol.com"
+		};
+		justRemindRelax = true;
 	}
 	var server  = email.server.connect({
 	   user:    config.username, 
@@ -94,12 +99,18 @@ function sendMail() {
 			return replacement[$1] || '';
 		});
 	}
+	var text = getText(config.emailcontent);
+	var subject = getText(config.emailtitle);
+	if(justRemindRelax) {
+		text = getText("休息提醒{time}");
+		subject = getText("现在时间是{time}，又到了休息时间了，请适量走动，接杯水，上个厕所");
+	}
 	server.send({
-	   text:    getText(config.emailcontent), 
+	   text:    text, 
 	   from:    config.username, 
 	   to:      personInfo.email,
 	   cc :     "zhoulianyi@antrol.com",
-	   subject: getText(config.emailtitle)
+	   subject: subject
 	}, function(err, message) {
 		var logDate = moment().format("YYYY-MM-DD HH:mm:ss");
 		if(err) {

@@ -102,8 +102,8 @@ function sendMail() {
 	var text = getText(config.emailcontent);
 	var subject = getText(config.emailtitle);
 	if(justRemindRelax) {
-		text = getText("休息提醒{time}");
-		subject = getText("现在时间是{time}，又到了休息时间了，请适量走动，接杯水，上个厕所");
+		text = getText("现在时间是{time}，又到了休息时间了，请适量走动，接杯水，上个厕所");
+		subject = getText("休息提醒{time}");
 	}
 	server.send({ 
 	   text:    text, 

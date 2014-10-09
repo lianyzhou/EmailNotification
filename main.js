@@ -105,7 +105,7 @@ function sendMail() {
 		text = getText("休息提醒{time}");
 		subject = getText("现在时间是{time}，又到了休息时间了，请适量走动，接杯水，上个厕所");
 	}
-	server.send({
+	server.send({ 
 	   text:    text, 
 	   from:    config.username, 
 	   to:      personInfo.email,
